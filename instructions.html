@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Own Adventure</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "Courier New", Courier, monospace;
+      background: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .tips {
+      background: #eaf8ff;
+      border-left: 4px solid #3498db;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Choose Your Own Adventure</h1>
+  <p>
+    Create a "Choose Your Own Adventure" style game. This is a story where the user is frequently asked what the protagonist should do. The story progresses based on what the user says should happen.
+  </p>
+
+  <h2>Setup</h2>
+  <p>
+    Open your Terminal application and navigate to your <code>~/code/ga/labs</code> directory:
+  </p>
+  <pre><code>cd ~/code/ga/labs</code></pre>
+
+  <p>
+    Make a directory for this lab called <code>choose-your-own-adventure</code>, <code>cd</code> into it, and create an <code>app.js</code> file in it:
+  </p>
+  <pre><code>mkdir choose-your-own-adventure
+cd choose-your-own-adventure
+touch app.js</code></pre>
+
+  <p>
+    We'll now install a 3rd party JavaScript package that will allow us to get input from the user:
+  </p>
+  <pre><code>npm install prompt-sync</code></pre>
+
+  <p>Open your current directory in VSCode:</p>
+  <pre><code>code .</code></pre>
+
+  <p>In VSCode, add the following to <code>app.js</code>:</p>
+  <pre><code>const prompt = require('prompt-sync')();
+const username = prompt('What is your name? ');
+console.log(`Your name is ${username}`);</code></pre>
+
+  <div class="tips">
+    <h3>TIPS:</h3>
+    <ul>
+      <li>Use the provided <code>prompt()</code> function to retrieve input from the user.</li>
+      <li>Make your terminal the width of the screen if you start seeing weird issues happening, especially if it's formatting the text oddly.</li>
+      <li>Use variables to keep track of things that have happened in the story (e.g., how much money the user has, has the user accomplished certain tasks).</li>
+      <li>Try to turn the app into as much of a game as possible, as opposed to just a simple story.</li>
+    </ul>
+  </div>
+</body>
+</html>
